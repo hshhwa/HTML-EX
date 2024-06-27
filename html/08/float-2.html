@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        /*
+            body의 margin : 8 => 브라우저의 기본 margin.
+
+        
+        */
+/* 
+        * {
+            margin:0; /* => 브라우저의 기본 margin을 0으로 초기화 
+        } */
+
+
+        div {
+        /*
+            body 기준으로 왼쪽에서 부터 자리를 잡게 됨.
+            body의 margin이 중첩이 되지 않도록 floating 한다.
+        */
+            padding:20px;
+            margin: 10px;
+        }
+
+        #box1 {
+            /*
+                box1을 기준으로 margin을 유지하면서, floating 한다
+            
+            */
+            background:yellowgreen;
+            float:left;           
+        }
+        
+        #box2 { /* 기존의 block level 요소의 margin과 겹칠수가없어  */
+            background: blueviolet;
+            float:left;
+        }
+        
+        #box3 { 
+            /* 
+                block level 요소임.
+                floating 된 box1, box2와 위치 관계는 없음.
+                body를 기준으로 왼쪽의 margin(body 와 box3)은 유지하게 되고,
+                top 쪽의 margin은 중첩된다.
+                ( => block level 요소가 세로로 위치하는 경우 마진 중첩이 발생. )
+            */
+            background: greenyellow;      
+             
+        }
+        
+        #box4 { 
+            /* 
+                box2, box3 의 margin과 중첩이 되지 않도록 margin을 유지하면서 floating 됬다.
+             */
+            background: skyblue;
+            float:left;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box1">박스1</div>
+    <div id="box2">박스2</div>
+    <div id="box3">박스3</div>
+    <div id="box4">박스4</div>
+</body>
+</html>

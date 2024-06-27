@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: #ccc;
+        }
+
+        #signup {
+            background: #fff;
+            border:1px solid #222;
+            border-radius: 5px;
+            width: 400px;
+            height: 400px;
+            padding:40px;
+            margin:20px auto;
+        }
+
+        #signup fieldset[target="type1"] {
+            border:1px solid #ccc;
+            height:130px;
+            margin-bottom: 30px;
+        }
+
+        #signup fieldset[target="type2"] {
+            border:1px solid #ccc;
+            height:42px;
+        }
+
+        #signup button {
+            border:1px solid #222;
+            border-radius: 20px;
+            display: block;
+            font-size: 20px;
+            margin:auto;
+            padding: 7px 25px;
+        }
+
+        #signup legend {
+            font-size: 20px;
+            font-weight: bold;
+            padding-left:5px;
+            padding-bottom: 10px;
+        }
+
+        #signup ul li {
+            list-style: none;
+            margin:0px auto;
+            padding: 5px 10px;
+            margin-bottom: 2px;
+        }
+
+        #signup label {
+            margin-right: 20px;
+            margin-left: 60px;
+        }
+
+    </style>
+</head>
+<body>
+     <form id="signup">
+         <fieldset target="type1">
+             <legend>개인 정보</legend>
+             <ul>
+                 <li>
+                     <label for="name">이름</label>
+                     <input id="name" name="name" type="text">
+                 </li>
+                 <li>
+                     <label for="phone">연락처</label>
+                     <input id="phone" name="phone" type="tel">
+                 </li>
+             </ul>
+         </fieldset>
+         <fieldset target="type1">
+             <legend>객실 형태</legend>
+             <ul>
+                 <li>
+                     <label><input type = "radio" name = "select" value = "normal">기본형(최대 2인)</label>
+                 </li>
+                 <li>
+                     <label><input type = "radio" name = "select" value = "family">가족형(최대 8인)</label>
+                 </li>
+             </ul>
+         </fieldset>
+         <fieldset target="type2">
+             <button type="submit"> 제 출 </button>
+         </fieldset>
+     </form>       
+</body>
+</html>

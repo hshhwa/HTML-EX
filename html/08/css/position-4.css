@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+/* position의 속성값을 relative와 absolute를 사용해서 위치 
+
+    absolute : relative 값을 사용한 상위 요소를 기준으로 위치를 지정해서 배치
+
+               absolute를 position에 적용하려면, relative로 설정된 요소가 있어야한다.
+
+               => relative 로 설정된 요소를 contents 로 하고,
+                  absolute 를 h1로 설정하겠다는 것임.
+
+               => h1은 contents를 기준으로 위치 지정이된다.
+*/
+
+
+
+#contents {
+    background: url(../images/bg.jpg) no-repeat;
+    /* 이미지를 요소 크기(800px,500px)에 맞게 여백 없이 설정.*/
+    background-size: cover;
+    width: 800px;
+    height: 500px;
+    margin:0 auto;
+    position:relative; /* h1 tag의 기준으로 사용 */
+}
+
+h1 {
+    color: yellowgreen;
+    font-size: 120px;
+
+    position:absolute; /* contents tag를 기준으로 위치 */
+    right:100px; /* contents의 오른쪽에서 100px 만큼 떨어짐 */
+    bottom:100px; /* contents의 아래에서 100px 만큼 떨어짐 */
+}

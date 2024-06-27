@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div > fieldset{
+            width:500px;
+            margin:20px 20px
+        }
+
+        label {
+            display: inline-block;
+            width: 150px;
+            height: 40px;
+        }
+
+        .buttons {
+            border: 1px solid gray;
+            border-top-left-radius: 0.8;
+        }
+    
+    </style>
+</head>
+<body>
+    <div>
+        <fieldset>
+            <legend><b>로그인정보</b></legend><br>
+            <label>아이디</label>
+            <input type="text" size="20"><br>
+            <label>비밀번호</label>
+            <input type="password" size="20"><br>
+            <label>비밀번호 확인</label>
+            <input type="password" size="20"><br>
+            <label>회원 등급</label>
+            <input type="text" size="20">
+        </fieldset>
+    </div>
+    <div>
+        <fieldset>
+            <legend><b>개인정보</b></legend><br>
+            <label>이름</label>
+            <input type="text" size="20" autofocus placeholder="5자미만 공백없이"><br>
+            <label>메일주소</label>
+            <input type="email" size="20" autofocus placeholder="abcd@domain.com"><br>
+            <label>연락처</label>
+            <input type="tel" size="20"><br>
+        </fieldset>
+    </div>
+        <fieldset style="width: 520px;">
+            <input type="submit" value ="제출">
+        </fieldset>
+
+</body>
+</html>
